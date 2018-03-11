@@ -4,8 +4,6 @@
 
 
 
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -13,8 +11,6 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
 
 
 
@@ -40,26 +36,12 @@ $dark-grey: rgb(68, 68, 68) !default;
 
 
 
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
 
-
-
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
-
-
+$gutter : 40px; /* Gutter of the grid */
+$gutter-mobile : 20px; /* Gutter of the grid */
 
 
 
@@ -69,3 +51,16 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+///
+/// Layers of the website
+/// So I don't have to use z-index but instead I specify a layer.
+/// 
+///
+$layers: (
+  'base': 0,
+  'navigation': 100,
+  'popup': 200,
+  'alert': 300
+) !default;

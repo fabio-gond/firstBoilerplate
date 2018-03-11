@@ -1,3 +1,76 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
+// This file contains all styles related to the navbar of the site/application.
 // -----------------------------------------------------------------------------
+
+/*
+  * The main navbar
+*/
+.navbar{
+  background: #333;
+
+  @include media("<phone") {
+      position:fixed;
+      z-index: nth($layers, "navigation") ;
+      width:100%; 
+  }
+}
+
+.navbar__logo{
+  color:#fff;
+  float:left;
+  display: block;
+  padding:10px;
+  text-decoration: none;
+}
+
+
+/*The manu inside the navbar*/
+.navbar__menu{
+  float:right;
+  margin:0;
+  padding:0;
+  
+  @include media("<phone") {
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    
+    &.open{
+      height:300px;
+      overflow: auto;
+    }
+  }
+}
+
+.navbar__menu__item{
+  display: inline-block;
+  font-size: 16px;
+  a {
+      color:#fff;display: block;padding:20px;text-decoration: none;
+      &:hover{
+          background: #000
+      }
+  }
+  @include media("<phone") {
+      display: block;
+  }
+}
+
+.navbar__icon-bar{
+  display: block;
+  float: right;
+  padding:20px;
+  display: none;
+
+  @include media("<phone") {
+      display: block;
+  }
+  
+  span{
+    display: block;
+    height:3px; 
+    width: 30px;
+    background: #fff; 
+    margin-bottom: 5px;
+  }
+}
