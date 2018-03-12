@@ -46,6 +46,7 @@
 .navbar__menu__item{
   display: inline-block;
   font-size: 16px;
+  
   a {
     color: $text-light-color ;
     display: block;
@@ -55,8 +56,32 @@
         background: black;
     }
   }
+  
   @include media("<phone") {
       display: block;
+  }
+}
+.navbar__menu__item.dropdown{
+  position: relative;
+  a::after{
+    content: ">";
+  }
+  &:hover ul.dropdown-menu {
+    display: block;
+  }
+  ul.dropdown-menu {
+    position: absolute;
+    z-index: map-get($layers, "navigation") ;
+    min-width: 200px;
+    display: none;
+    box-shadow: 0 7px 12px rgba(0,0,0,.175);
+    background-color: $menu-color;
+    
+    li { 
+      float: none;
+      margin: 0; 
+    }
+    
   }
 }
 

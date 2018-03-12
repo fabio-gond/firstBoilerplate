@@ -24,6 +24,15 @@ html {
 }
 
 /**
+ * Reset all paddings and margins
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/**
  * Basic styles for links
  */
 a {
@@ -32,7 +41,6 @@ a {
 
   @include on-event {
     color: $text-color;
-    text-decoration: underline;
   }
 }
 

@@ -470,26 +470,33 @@ html {
   box-sizing: inherit; }
 
 /**
+ * Reset all paddings and margins
+*/
+/* line 30, ../sass/base/_base.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/**
  * Basic styles for links
  */
-/* line 29, ../sass/base/_base.scss */
+/* line 38, ../sass/base/_base.scss */
 a {
   color: #444444;
   text-decoration: none; }
   /* line 18, ../sass/abstracts/_mixins.scss */
   a:hover, a:active, a:focus {
-    color: #444444;
-    text-decoration: underline; }
+    color: #444444; }
 
 /* Avoid list style */
-/* line 40, ../sass/base/_base.scss */
+/* line 48, ../sass/base/_base.scss */
 ul {
   list-style: none; }
 
 /**
  * Default setting for the main content
 */
-/* line 47, ../sass/base/_base.scss */
+/* line 55, ../sass/base/_base.scss */
 .content {
   min-height: 60%; }
 
@@ -1104,12 +1111,12 @@ body {
 .navbar__menu__item {
   display: inline-block;
   font-size: 16px; }
-  /* line 49, ../sass/layout/_header.scss */
+  /* line 50, ../sass/layout/_header.scss */
   .navbar__menu__item a {
     color: #ededed;
     display: block;
     padding: 20px; }
-    /* line 54, ../sass/layout/_header.scss */
+    /* line 55, ../sass/layout/_header.scss */
     .navbar__menu__item a:hover {
       background: black; }
   @media (max-width: 479px) {
@@ -1117,17 +1124,39 @@ body {
     .navbar__menu__item {
       display: block; } }
 
-/* line 63, ../sass/layout/_header.scss */
+/* line 64, ../sass/layout/_header.scss */
+.navbar__menu__item.dropdown {
+  position: relative; }
+  /* line 66, ../sass/layout/_header.scss */
+  .navbar__menu__item.dropdown a::after {
+    content: ">"; }
+  /* line 69, ../sass/layout/_header.scss */
+  .navbar__menu__item.dropdown:hover ul.dropdown-menu {
+    display: block; }
+  /* line 72, ../sass/layout/_header.scss */
+  .navbar__menu__item.dropdown ul.dropdown-menu {
+    position: absolute;
+    z-index: 100;
+    min-width: 200px;
+    display: none;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.175);
+    background-color: #444444; }
+    /* line 80, ../sass/layout/_header.scss */
+    .navbar__menu__item.dropdown ul.dropdown-menu li {
+      float: none;
+      margin: 0; }
+
+/* line 88, ../sass/layout/_header.scss */
 .navbar__icon-bar {
   display: block;
   float: right;
   padding: 20px;
   display: none; }
   @media (max-width: 479px) {
-    /* line 63, ../sass/layout/_header.scss */
+    /* line 88, ../sass/layout/_header.scss */
     .navbar__icon-bar {
       display: block; } }
-  /* line 73, ../sass/layout/_header.scss */
+  /* line 98, ../sass/layout/_header.scss */
   .navbar__icon-bar span {
     display: block;
     height: 3px;

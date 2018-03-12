@@ -14,7 +14,7 @@
   
   </main>
   <?php include "includes/partials/footer.php"; ?>
-  <script src="assets/js/base.js"></script>
+  <script src="assets/js/base.js?t=<?php echo time(); ?>"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 </body>
 

@@ -26,33 +26,36 @@ for (var i = 0; i < toggle.length; i++) {
 }
 
 
-
 // Dropdown Menu
-var dropdown = document.querySelectorAll('.dropdown');
+var dropdown = document.querySelectorAll('.js-dropdown');
 var dropdownArray = Array.prototype.slice.call(dropdown, 0);
 dropdownArray.forEach(function (el) {
 
-  var button = el.querySelector('a[data-toggle="dropdown"]'),
-    menu = el.querySelector('.dropdown-menu');
-
-  button.addEventListener('click', function (e) {
-    if (menu.className == 'dropdown-menu') {
-      // remove all classes
-      for (var i = 0; i < dropdownArray.length; i++) {
-        dropdownArray[i].querySelector('.dropdown-menu').className = 'dropdown-menu';
-        dropdownArray[i].querySelector('a[data-toggle="dropdown"]').className = '';
-      }
-      // add classes to current item
-      menu.className = 'dropdown-menu open';
-      button.className = 'select';
-      e.preventDefault();
-    } else {
-      // close current item
-      menu.className = 'dropdown-menu';
-      button.className = '';
-      e.preventDefault();
-    }
-  });
+//  var button = el.querySelector('a[data-toggle="dropdown"]'),
+//    menu = el.querySelector('.js-dropdown-menu');
+//  
+//  button.addEventListener('mouseover', function (e) {
+//    menu.classList.toggle('open');
+//  });
+//  button.addEventListener('click', function (e) {
+//    if (menu.className == 'js-dropdown-menu') {
+//      // remove all classes
+//      for (var i = 0; i < dropdownArray.length; i++) {
+//        dropdownArray[i].querySelector('.js-dropdown-menu').className = 'js-dropdown-menu';
+//        dropdownArray[i].querySelector('a[data-toggle="dropdown"]').className = '';
+//      }
+//      // add classes to current item
+//      menu.className = 'js-dropdown-menu open';
+//      button.className = 'select';
+//      e.preventDefault();
+//    } else {
+//      // close current item
+//      menu.className = 'js-dropdown-menu';
+//      button.className = '';
+//      e.preventDefault();
+//    }
+//  });
+  
 });
 
 /**

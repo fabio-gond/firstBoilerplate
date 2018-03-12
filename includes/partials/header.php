@@ -14,7 +14,13 @@
         </li>
         <li class="navbar__menu__item"><a href="page.html">Page</a>
         </li>
-        <li class="navbar__menu__item"><a href="">Item</a>
+        <li class="navbar__menu__item dropdown js-dropdown">
+          <a href="" data-toggle="dropdown" class="pino" >Item</a>
+          <ul class="dropdown-menu js-dropdown-menu">
+            <li><a href="">First index</a></li>
+            <li><a href="">Second index</a></li>
+            <li><a href="">Third index</a></li>
+          </ul>
         </li>
         <li class="navbar__menu__item"><a href="">Item</a>
         </li>
