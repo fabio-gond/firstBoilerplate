@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.footer{
+  background: $footer-color;
+  color: $text-light-color ;
+  a{
+    color: $text-light-color ;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.footer__metadata {
+  background: darken($footer-color,20%);
+  padding: 20px;
+  font-size: map-get($font-sizes, "metadata") ;
+}
+.footer__col{
+  .title{
+    padding:5px 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $text-light-color;
+    border-top: 1px solid $text-light-color;
+  }
+}

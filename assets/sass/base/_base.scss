@@ -8,6 +8,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  background-color: $background-color;
 }
 
 /**
@@ -26,7 +27,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $a-color;
   text-decoration: none;
 
   @include on-event {
@@ -34,3 +35,18 @@ a {
     text-decoration: underline;
   }
 }
+
+/* Avoid list style */
+ul {
+  list-style: none;
+}
+
+/**
+ * Default setting for the main content
+*/
+.content{
+  min-height: 60%;
+}
+
+
+

@@ -454,7 +454,8 @@ template {
 /* line 8, ../sass/base/_base.scss */
 html {
   box-sizing: border-box;
-  font-size: 100%; }
+  font-size: 100%;
+  background-color: #ededed; }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -462,7 +463,7 @@ html {
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-/* line 19, ../sass/base/_base.scss */
+/* line 20, ../sass/base/_base.scss */
 *,
 *::before,
 *::after {
@@ -471,14 +472,26 @@ html {
 /**
  * Basic styles for links
  */
-/* line 28, ../sass/base/_base.scss */
+/* line 29, ../sass/base/_base.scss */
 a {
-  color: #e50050;
+  color: #444444;
   text-decoration: none; }
   /* line 18, ../sass/abstracts/_mixins.scss */
   a:hover, a:active, a:focus {
-    color: #222222;
+    color: #444444;
     text-decoration: underline; }
+
+/* Avoid list style */
+/* line 40, ../sass/base/_base.scss */
+ul {
+  list-style: none; }
+
+/**
+ * Default setting for the main content
+*/
+/* line 47, ../sass/base/_base.scss */
+.content {
+  min-height: 60%; }
 
 /* Grid (Mobile First) */
 /* line 3, ../sass/base/_grid.scss */
@@ -986,8 +999,8 @@ html {
  */
 /* line 4, ../sass/base/_typography.scss */
 body {
-  color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  color: #444444;
+  font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /**
  * Clear inner floats
@@ -1048,17 +1061,21 @@ body {
   position: absolute;
   width: 1px; }
 
-/* line 4, ../sass/layout/_header.scss */
+/*
+  * The main navbar
+*/
+/* line 8, ../sass/layout/_header.scss */
 .navbar {
-  background: #333; }
+  font-size: 20px;
+  background-color: #444444; }
   @media (max-width: 479px) {
-    /* line 4, ../sass/layout/_header.scss */
+    /* line 8, ../sass/layout/_header.scss */
     .navbar {
       position: fixed;
       z-index: 100;
       width: 100%; } }
 
-/* line 14, ../sass/layout/_header.scss */
+/* line 19, ../sass/layout/_header.scss */
 .navbar__logo {
   color: #fff;
   float: left;
@@ -1066,55 +1083,79 @@ body {
   padding: 10px;
   text-decoration: none; }
 
-/* line 22, ../sass/layout/_header.scss */
+/*The manu inside the navbar*/
+/* line 29, ../sass/layout/_header.scss */
 .navbar__menu {
   float: right;
   margin: 0;
   padding: 0; }
   @media (max-width: 479px) {
-    /* line 22, ../sass/layout/_header.scss */
+    /* line 29, ../sass/layout/_header.scss */
     .navbar__menu {
       width: 100%;
       height: 0px;
       overflow: hidden; }
-      /* line 32, ../sass/layout/_header.scss */
+      /* line 39, ../sass/layout/_header.scss */
       .navbar__menu.open {
         height: 300px;
         overflow: auto; } }
 
-/* line 39, ../sass/layout/_header.scss */
+/* line 46, ../sass/layout/_header.scss */
 .navbar__menu__item {
   display: inline-block;
   font-size: 16px; }
-  /* line 42, ../sass/layout/_header.scss */
+  /* line 49, ../sass/layout/_header.scss */
   .navbar__menu__item a {
-    color: #fff;
+    color: #ededed;
     display: block;
-    padding: 20px;
-    text-decoration: none; }
-    /* line 44, ../sass/layout/_header.scss */
+    padding: 20px; }
+    /* line 54, ../sass/layout/_header.scss */
     .navbar__menu__item a:hover {
-      background: #000; }
+      background: black; }
   @media (max-width: 479px) {
-    /* line 39, ../sass/layout/_header.scss */
+    /* line 46, ../sass/layout/_header.scss */
     .navbar__menu__item {
       display: block; } }
 
-/* line 53, ../sass/layout/_header.scss */
+/* line 63, ../sass/layout/_header.scss */
 .navbar__icon-bar {
   display: block;
   float: right;
   padding: 20px;
   display: none; }
   @media (max-width: 479px) {
-    /* line 53, ../sass/layout/_header.scss */
+    /* line 63, ../sass/layout/_header.scss */
     .navbar__icon-bar {
       display: block; } }
+  /* line 73, ../sass/layout/_header.scss */
+  .navbar__icon-bar span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background: #fff;
+    margin-bottom: 5px; }
 
-/* line 64, ../sass/layout/_header.scss */
-.navbar__icon-bar span {
-  display: block;
-  height: 3px;
-  width: 30px;
-  background: #fff;
-  margin-bottom: 5px; }
+/* line 4, ../sass/layout/_footer.scss */
+.footer {
+  background: #444444;
+  color: #ededed; }
+  /* line 7, ../sass/layout/_footer.scss */
+  .footer a {
+    color: #ededed; }
+    /* line 9, ../sass/layout/_footer.scss */
+    .footer a:hover {
+      text-decoration: underline; }
+
+/* line 14, ../sass/layout/_footer.scss */
+.footer__metadata {
+  background: #111111;
+  padding: 20px;
+  font-size: 12px; }
+
+/* line 20, ../sass/layout/_footer.scss */
+.footer__col .title {
+  padding: 5px 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed; }

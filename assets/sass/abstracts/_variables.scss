@@ -12,28 +12,55 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
+///
+/// Font Sizes
+/// 
+///
+$font-sizes: (
+  'metadata': 12px,
+  'navbar': 16px,
+  'text': 16px
+) !default;
 
 
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
+//// ------------------------ COLOURS --------------------
 
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+///
+/// Colours
+/// 
+$colors-palette: (
+  'light-grey': rgb(237, 237, 237),
+  'mid-grey': rgb(153, 153, 153),
+  'dark-grey': rgb(68, 68, 68),
+  'orange': rgb(255,152,0)
+) !default;
 
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
 
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
 
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+///
+/// Theme Colors
+///
 
+$primary-color: map-get($colors-palette, "mid-grey") !default;
+
+$secondary-color: map-get($colors-palette, "light-grey") !default;
+
+$accent-color: map-get($colors-palette, "orange") !default;
+
+$background-color: map-get($colors-palette, "light-grey") !default;
+
+$menu-color: map-get($colors-palette, "dark-grey") !default;
+
+$text-color: map-get($colors-palette, "dark-grey") !default;
+
+$text-light-color:map-get($colors-palette, "light-grey") !default;
+
+$a-color: $text-color !default;
+
+$footer-color: map-get($colors-palette, "dark-grey") !default;
+
+
+// ------------------------------------------------------------
 
 
 /// Container's maximum width
