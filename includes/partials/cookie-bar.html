@@ -1,0 +1,21 @@
+<p class="cookie-bar">
+  Questo sito utilizza i cookie per migliorare la tua esperienza di navigazione. Leggi la <a href="privacy-policy.php">Privacy Policy</a> per saperne di più. Continuando sul sito stai accettando le condizioni. Grazie
+</p>
+<script type="text/javascript">
+  docReady(function() {
+    var cookieBar = document.querySelector(".cookie-bar");
+    cookieBar.addEventListener("click", function(o){
+      o.stopPropagation()
+    });
+      
+//    $("#boxinfocookie").click(function(o){
+//    o.stopPropagation()}),
+//    $("body").click(function(o){
+//    "block"==$("#boxinfocookie").css("display") && $("#boxinfocookie").css("display","none")}),
+//    $(document).scroll(function(){"block"==$("#boxinfocookie").css("display") && $("#boxinfocookie").css("display","none")})
+  });
+  
+//if(!botCheck()){
+//  $("#boxinfocookie").css("display","block");
+//}
+</script>

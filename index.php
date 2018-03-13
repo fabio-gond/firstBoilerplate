@@ -13,9 +13,17 @@
   <main class="content">
   
   </main>
-  <?php include "includes/partials/footer.php"; ?>
-  <script src="assets/js/base.js?t=<?php echo time(); ?>"></script>
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script src="assets/js/vendor/docready.js"></script>
+  <?php 
+    // Footer
+    include "includes/partials/footer.php";
+  
+    // Cookie Bar
+    include "includes/partials/cookie-bar.html";
+  
+    // Javascript at the end of the body
+    include "includes/partials/end-scripts.php"; 
+  ?>
 </body>
 
 </html>
