@@ -1,50 +1,48 @@
 /* CSS Document */
 
-.card, .card>.image{
+.card, .card__image {
   border: #ddd 1px solid;
 }
 
-.card{
+.card {
   padding: 0;
   height: 450px;
-  width: 350px;
 }
 
-.card>.image {
-  /*background-image: url("https://images.unsplash.com/photo-1511225160131-38607044acc7?ixlib=rb-0.3.5&s=7e61429ce86a13776775fa88f7c3ec9a&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;*/
+.card__image {
   background: url(https://images.unsplash.com/photo-1511225160131-38607044acc7?ixlib=rb-0.3.5&s=7e61429ce86a13776775fa88f7c3ec9a&auto=format&fit=crop&w=1350&q=80) no-repeat center/cover;
   width: 100%;
   height: 60%;
 }
 
-.place, .date, .description{
+.card__place, .card__date, .card__description {
   padding: 0 10px;
 }
 
-.place{
+.card__place {
   font-size: 20px;
 }
 
-.date {
-  color:rgb(0,153,255);
+.card__date {
+  color: rgb(0,153,255);
   font-size: 14px;
   font-weight: bold;
 }
 
-.price-string {
+.card__price-string {
   position: absolute;
-  display: block;
+  display: inline-block;
   right: 15px;
   bottom: 10px;
 }
 
-.price {
+.card__price {
+  display: inline;
   font-weight: bold;
   font-size: 25px;
 }
 
-.description {
-    color: #444;
-    font-size: 14px;
+.card__description {
+  color: #444;
+  font-size: 14px;
 }
