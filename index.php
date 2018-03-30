@@ -10,8 +10,11 @@
 
 <body>
   <?php include "includes/partials/header.php"; ?>
-  <main class="content">
-  
+  <?php include "includes/partials/form.html"; ?>
+  <main class="content grid">
+    <?php include "includes/partials/card.html"; ?>
+    <?php include "includes/partials/card.html"; ?>
+    <?php include "includes/partials/card.html"; ?>
   </main>
   <script src="assets/js/vendor/docready.js"></script>
   <?php 
